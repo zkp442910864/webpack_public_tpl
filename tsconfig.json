@@ -1,0 +1,26 @@
+{
+	"compilerOptions": {  //生成相关说明,TypeScript编译器如何编译.ts文件。
+		"module": "commonjs", //指定模块代码生成:“none”、“commonjs”、“amd”、“system”、“umd”、“es2015”或“esnext”。
+		"target": "es5", //指定ECMAScript目标版本。许可值为“es3”、“es5”、“es6”、“es2015”、“es2016”、“es2017”、“es2018”或“esnext”。
+		// "lib": ["es6"],  //指定要包含在编译中的库文件。需要TypeScript 2.0或更高版本。
+		"sourceMap": true, //是否生成相应的“地图”的文件。
+		// "rootDir": "src",  //指定输入文件的根目录。使用——outDir控制输出目录结构。
+        // "outDir": "out",  //将输出结构重定向到目录。
+		"allowJs": true,
+		"jsx": "react",
+
+		/********/
+		// 配置路径映射的白名单, 对应 webpack的 resolve.alias
+		"baseUrl": ".",
+		"paths": {
+			"@ts/*": ["src/assets/js/*"],
+			// "@view/*": ["../src/view/*"],
+			"@img/*": ["src/assets/img/*"],
+			"@css/*": ["src/assets/css/*"]
+		},
+		/********/
+	},
+	"exclude": [
+		"node_modules"
+	]
+}
