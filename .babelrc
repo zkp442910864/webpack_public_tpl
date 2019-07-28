@@ -1,23 +1,7 @@
-/*
-	使用 typescript 要打开两个注释
-	文件后缀必须是 ts
-*/
+
 {
 	"presets": [
-		[
-			"@babel/preset-env",
-			{
-				// "useBuiltIns": "entry",
-				"targets": {
-					"browsers": [
-						"> 1%",
-						"last 2 versions",
-						"not ie <= 8"
-					]
-				}
-			}
-		],
-		["minify"]
+		"@babel/preset-env", "@babel/preset-react", ["minify"]
 	],
 	"plugins": [
 		"@babel/plugin-transform-runtime",

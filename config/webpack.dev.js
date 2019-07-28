@@ -17,7 +17,7 @@ module.exports = (env) => {
 			host: '0.0.0.0',
 			useLocalIp: true, // 此选项允许浏览器使用本地IP打开。 host 必须改成0.0.0.0
 			port: 3333,
-			inline: false, // 改动 刷新页面
+			inline: true, // 改动 刷新页面
 			hot: false, // 启用webpack的模块热替换特性
 
 			/* proxy: { // 代理 如果你有单独的后端开发服务器API，并且希望在同域名下发送API请求，那么代理某些URL会很有用  貌似会影响速度

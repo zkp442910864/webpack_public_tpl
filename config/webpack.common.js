@@ -1,7 +1,7 @@
 
 
 
-const router = require('../router');
+let router = require('../router');
 const { returnPath, returnPublicPath } = require('./index');
 const webpack = require('webpack');
 const path = require("path");
@@ -11,7 +11,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin'); // 提取公共
 module.exports = (env) => {
 	// 这里的env参数 是写在运行命令的
 	const NODE_ENV = env.NODE_ENV;
-	// console.log(NODE_ENV);
+
+	router = router(NODE_ENV);
+
 	return {
 		entry: router.entry,
 		output: {
@@ -28,7 +30,7 @@ module.exports = (env) => {
 			rules: [
 				{
 					test: /\.(css|scss)$/,
-					exclude: /(node_modules|bower_components)/,
+					// exclude: /(node_modules|bower_components)/,
 					use: [{
 						loader: MiniCssExtractPlugin.loader,
 						options: {
@@ -49,7 +51,7 @@ module.exports = (env) => {
 						}
 					}]
 				}, {
-					test: /\.js$/,
+					test: /\.(js|jsx)$/,
 					exclude: /(node_modules|bower_components)/,
 					use: [{
 						loader: 'babel-loader'
@@ -145,7 +147,9 @@ module.exports = (env) => {
 			// 默认加载的js
 			new webpack.ProvidePlugin({
 				'Promise': 'bluebird',
-				'common': path.resolve(__dirname, '..', 'src/assets/js/common.js'),
+				// 'axios': 'axios',
+				'common': path.resolve(__dirname, '..', 'src/assets/js/module/common.jsx'),
+				'ajax': path.resolve(__dirname, '..', 'src/assets/js/module/ajax.js'),
 				// 'React': 'react',
 				// 'ReactDom': 'react-dom',
 			})

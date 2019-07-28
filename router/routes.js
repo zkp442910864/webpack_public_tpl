@@ -1,21 +1,18 @@
 
-
-const {topTpl} = require('./layout');
-
 const routes = [
 	{
 		entryKey: 'index',
 		custom: {
 			topTpl: {
-				title: '首页'
+				title: '首页',
+				// otherMeta: `
+				// 	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+				// 	<meta http-equiv="Pragma" content="no-cache" />
+				// 	<meta http-equiv="Expires" content="0" />
+				// `
 			},
 		}
 	},
 ];
-
-routes.forEach(item => {
-	item.custom.topTpl.routes = routes;
-	item.custom.topTpl = topTpl(item.custom.topTpl);
-});
 
 module.exports = routes;

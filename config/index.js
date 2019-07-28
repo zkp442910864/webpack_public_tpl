@@ -12,8 +12,8 @@ const config = {
 		staticPublicPath: '/'
 	},
 	none: {
-		publicPath: 'http://www.demo.zz/webpack/webpack_typescript/dist/',
-		staticPublicPath: 'http://www.demo.zz/webpack/webpack_typescript/dist/'
+		publicPath: './',
+		staticPublicPath: '../../'
 	},
 	build: {
 		// 单层结构目录文件的可以用相对路径 (就是所有的页面属于同级的)
@@ -63,6 +63,6 @@ module.exports = {
 		viewUrl: 'src/view/', // 视图文件
 		sourcesUrl: 'src/assets', // 资源文件
 		default: ['css', 'js'], // 生成文件的存放目录文件夹
-		defaultSuffix: ['ejs', 'scss', 'js'], // 必须和initUrl 里的文件对应起来
+		defaultSuffix: ['ejs', 'scss', 'jsx'], // 必须和initUrl 里的文件对应起来
 	}
 };

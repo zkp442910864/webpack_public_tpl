@@ -6,7 +6,7 @@
 module.exports = ({ file, options, env }) => ({
 	// parser: 'sugarss',
 	plugins: [
-		require('autoprefixer')({ browsers: ['cover 99.5% in CN'] }),
+		require('autoprefixer')(),
 		require('cssnano')
 	]
 });
