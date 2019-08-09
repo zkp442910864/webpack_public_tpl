@@ -10,8 +10,9 @@ import '@css/index.scss';
 	document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
 
 	var deviceWidth = document.documentElement.clientWidth;
-	if(deviceWidth > 1920) deviceWidth = 1920;
-	document.documentElement.style.fontSize = deviceWidth / 19.2+ 'px';
+	// if(deviceWidth > 1920) deviceWidth = 1920;
+	// document.documentElement.style.fontSize = deviceWidth / 19.2+ 'px';
+	document.documentElement.style.fontSize = 100 * deviceWidth / 1920+ 'px';
 })();
 
 
